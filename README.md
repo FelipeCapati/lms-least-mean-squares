@@ -5,7 +5,37 @@ Esse projeto tem como objetivo exemplificar a aplicação do algorítimo LMS, ta
 Mínimos Quadrados) utilizado para regressão multivariada.
 
 ## II.	FUNDAMENTAÇÃO TEÓRICA ##
+
 ### A.	METODO DOS MÍNIMOS QUADRADOS ###
+O Método dos Mínimos Quadrados é um dos métodos utilizado para tratamento estatistico de dados experimentais (frequentemente
+utilizado em Física e outras ciencias), utilizado para obter estimativas com base em dados.[1]<br>
+A ideia basica é aproximar o sistema de equações a funções de reta, tomando com base um vetor de entrada X, como:
+
+![Alt text](images/lms-eq1.png?)
+
+Se a uma função de reta é dado por "Y = ax + b", na qual temos o termo independente e o termo que multiplica a variavel,
+podemos transpor isso a um vetor de "p" estados, da seguinte maneira:
+
+![Alt text](images/lms-eq2.png?)
+
+Beta0 é o termo independente da função, tambem conhecido em Machine Learning como BIAS e cada outro termo do vetor Beta,
+ou seja, Beta1 ... BetaP referece a como a variavel se relaciona a função Y de estudo. Podendo ser de tres maneiras:
+
+<b>Relação positiva e Linear:</b>
+ ![Alt text](images/lms-graph-01.png?)
+
+<b>Relação negativa e Linear:</b> 
+ ![Alt text](images/lms-graph-02.png?)
+ 
+ <b>Sem Relacionamento:</b>
+ ![Alt text](images/lms-graph-03.png?)
+ 
+Na qual Beta é obtido calculando o mínimo erro quadratico, dada pela função:
+![Alt text](images/lms-eq3.png?)
+
+Ao fim podemos inferir que o vetor de Beta pode ser calculado da seguinte maneira:
+
+![Alt text](images/lms-eq4.png?)
 
 ## III.	METODOLOGIA ##
 Para o projeto vigente foi utilizado python juntamente com o Notebook Jupyter para prototipar o modelo do
@@ -54,17 +84,12 @@ e o método quadratico:
 ![Alt text](images/us-census-lms.png?)
 
 ## V. CONCLUSÃO ##
-
-TODO: FAAAAAAAAAAAAAZER AINDA<BR><BR>
-Dado os resultados vistos em IV podemos inferir que o Método de Integração de Monte Carlo é funcional, 
-converge ao valor real de (9) com cerca 30.000 iterações e que o tempo de processamento tem um comportamento 
-crescente proporcional a N tanto para o cálculo da integral utilizando MPI, quanto para integral 
-sem o MPI.<br>
-Para essa análise 30.000 iterações foram suficientes, porém vale ressaltar que o valor de N é função do 
-problema proposto, ou seja, varia para cada aplicação do modelo.<br> 
-O MPI proporcionou um aumento significativo para o tempo de processamento (3,5x) quando utiliza-se 4 nós de 
-processamento, sendo que é possível escalar esse valor para M máquinas ligadas em rede, o que daria um 
-aumento muito mais significado do que o apresentado nesse projeto.
+Dado os resultados vistos em IV podemos inferir que o Método dos Mínimos Quadrados chegou ao resultado esperado e
+graficamente é possivel inferir que o erro de aproximação é relativamente baixo.<br>
+Um dos objetivos do projeto em curso é implementar o algoritimo do MMQ. Se analisarmos os dados chegamos a conclusão de 
+que o algorítimo foi implementado corretamente, porém não é possivel fazer inferencias relativas aos problemas abordados 
+anteriormente devido a não implementação de funções que calculem o erro, erro médio quadrático, implementação do Teste F,
+Teste T e outras abordagens estatísticas que validem a solução de regressão proposta anteriormente.
 
 ## VI. AGRADECIMENTOS ##
 
@@ -75,6 +100,5 @@ apoiaram em meio a dificuldades.
 
 ## VII. REFERÊNCIAS ##
 
-TODO FAZER AINDA <BR><BR>
-[1]	R. E. Caflisch, “Monte Carlo and quasi-Monte Carlo methods” Mathematics Department, UCLA, Los Angeles, CA, USA, 1998.<br>
-[2]	W. Fellen, An Introduction to Probability Theory and its Application, vol. 1. Wiley, 1971.
+[1]	O. A. M. Helene, Método dos mínimos quadrados com formalismo matricial: guia do usuário, Editora: Livraria da Física, São Paulo, 2016<br>
+[2]	R. Bianchi, Tópicos Especiais em Aprendizagem, 2019, ppt slide Centro Universitário FEI.
