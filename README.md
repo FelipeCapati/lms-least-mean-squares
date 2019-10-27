@@ -21,14 +21,14 @@ podemos transpor isso a um vetor de "p" estados, da seguinte maneira:
 Beta0 é o termo independente da função, também conhecido em Machine Learning como BIAS e cada outro termo do vetor Beta,
 ou seja, Beta1 ... BetaP refere-se a como a variável se relaciona a função Y de estudo. Podendo ser de três maneiras:
 
-<b>Relação positiva e Linear:</b>
- ![Alt text](images/lms-graph-01.png?)
+<b>Relação positiva e Linear:</b><br>
+ ![Alt text](images/lms-graph-01.png?)<br>
 
-<b>Relação negativa e Linear:</b> 
- ![Alt text](images/lms-graph-02.png?)
+<b>Relação negativa e Linear:</b> <br>
+ ![Alt text](images/lms-graph-02.png?)<br>
  
- <b>Sem Relacionamento:</b>
- ![Alt text](images/lms-graph-03.png?)
+ <b>Sem Relacionamento:</b><br>
+ ![Alt text](images/lms-graph-03.png?)<br>
  
 Na qual Beta é obtido calculando o mínimo erro quadrático, dada pela função:
 ![Alt text](images/lms-eq3.png?)
