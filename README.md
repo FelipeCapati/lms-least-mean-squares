@@ -9,6 +9,7 @@ Mínimos Quadrados) utilizado para regressão multivariada.
 ### A.	MÉTODO DOS MÍNIMOS QUADRADOS ###
 O Método dos Mínimos Quadrados é um dos métodos utilizado para tratamento estatístico de dados experimentais (frequentemente
 utilizado em Física e outras ciências), utilizado para obter estimativas com base em dados.[1]<br>
+A base matemática contextualizada a seguir foi retirada de [2], mais detalhes podem ser analisado utilizando [1] ou [2].<br>
 A ideia básica é aproximar o sistema de equações a funções de reta, tomando com base um vetor de entrada X, como:
 
 ![Alt text](images/lms-eq1.png?)
